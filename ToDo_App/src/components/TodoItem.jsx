@@ -1,4 +1,6 @@
-function TodoItem({todoName,todoDate}) {
+import { RiDeleteBin6Line } from "react-icons/ri";
+
+function TodoItem({todoName, todoDate, onDeleteClick}) {
 
   return (
     <div className="container">
@@ -10,7 +12,7 @@ function TodoItem({todoName,todoDate}) {
           {todoDate}
         </div>
         <div className="col-2">
-          <button type="button" className="btn btn-danger my-btn">Delete</button>
+          <button type="button" className="btn btn-danger my-btn" onClick={() => onDeleteClick(todoName)}><RiDeleteBin6Line /></button>
         </div>
       </div>
     </div>
